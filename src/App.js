@@ -15,6 +15,15 @@ const App = () => {
         <LoadingBar height={3} color="#f11946" progress={progress} />
         <Navbar />
         <Switch>
+        <Route exact path="/">
+            <News
+              setProgress={setProgress}
+              pageSize={40}
+              country="in"
+              category="general"
+            />
+          </Route>
+
           <Route exact path="/home">
             <News
               setProgress={setProgress}
